@@ -13,6 +13,7 @@ html {
 /* NAVIGATION */
 nav {
     position: fixed;
+    z-index: 1;
     top: 40px;
     right: 25px;
 }
@@ -35,9 +36,11 @@ nav ul a {
     color: black;
 }
 
-/* MAIN CONTENT */
+/* SECTIONS */
 section {
+    position: relative;
     height: 100vh;
+    color: yellow;
 }
 
 #first {
@@ -50,4 +53,19 @@ section {
 
 #third {
     background-color: yellow;
+}
+
+/* CONTENT */
+section .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+
+}
+
+section:last-child {
+    color: green;
 }
